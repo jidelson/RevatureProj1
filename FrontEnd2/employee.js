@@ -2,7 +2,7 @@ const url = "http://localhost:8080/ers/employees/";
 
 document.getElementById("oldButton").addEventListener("click", oldFunction);
 document.getElementById("pendingButton").addEventListener("click", pendingFunction);
-document.getElementById("submit").addEventListener("click", onSubmit);
+document.getElementById("submitbutton").addEventListener("click", onSubmit);
 document.getElementById("backBtn").addEventListener("click", backFunction);
 
 async function oldFunction(){
@@ -143,7 +143,7 @@ async function onSubmit(){
     let amount = document.getElementById("amount").value;
 
     let userInput = {
-        reimb_type_id: type_id,
+        reimb_type_id: input,
         reimb_description: description,
         reimb_amount: amount
     };
@@ -154,12 +154,18 @@ async function onSubmit(){
         credentials: "include"
     });
 
-    if(type_id > 0 && type_id < 5){
+    console.log(response);
+
+    if(input > 0 && input < 5){
         document.getElementById("submitMsg").style.display = "block";
     } else {
         document.getElementById("errorMsg").style.display = "block";
     }  
 }
+
+
 function backFunction(){
     window.location.href = "index.html";
 }
+
+
