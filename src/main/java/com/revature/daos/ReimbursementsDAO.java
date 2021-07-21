@@ -174,11 +174,9 @@ public class ReimbursementsDAO implements ReimbursementsDAOInterface {
 	@Override
 	public void resolveTicket(int reimb_id, int reimb_status_id) {
 		try(Connection conn = ConnectionUtil.getConnection()){
-			String sql = "UPDATE \"ers\".reimbursements SET reimb_status_id = ?, reimb_resolver = 2, reimb_resolved = ?"
-					+ "WHERE reimb_id = ?;";
+			String sql = "UPDATE \"ers\".reimbursements SET reimb_status_id = ?, reimb_resolver = 2, reimb_resolved = current_timestamp WHERE reimb_id = ?;";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
-			
 			ps.setInt(1, reimb_status_id);
 			ps.setInt(2, reimb_id);
 			ps.executeUpdate();
