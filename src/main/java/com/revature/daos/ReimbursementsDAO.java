@@ -181,6 +181,7 @@ public class ReimbursementsDAO implements ReimbursementsDAOInterface {
 			ps.setInt(2, reimb_id);
 			ps.executeUpdate();
 		} catch(SQLException e) {
+			System.out.println("ERROR: Resolution failed!");
 			e.printStackTrace();
 		}
 	}

@@ -163,12 +163,14 @@ async function filterFunction(){
 
 async function submitReimbFunction(){
     let reimbInput = document.getElementById("reimbIdInput").value;
-    let statusInput = document.getElementById("statusResolveInput").value;
+    let statusResolveInput = document.getElementById("statusResolveInput").value;
 
     let userInput = {
         reimb_id: reimbInput,
-        reimb_status_id: statusInput
+        reimb_status_id: statusResolveInput
     };
+
+    console.log(userInput);
 
     let response = await fetch(url + "resolve", {
         method: "POST",
