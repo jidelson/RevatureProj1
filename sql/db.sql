@@ -37,7 +37,7 @@ CREATE TABLE reimbursements(
 	reimb_type_id INT REFERENCES reimbursement_type(reimb_type_id) NOT NULL
 	);
 
---DROP TABLE reimbursements;
+DROP TABLE reimbursements;
 
 INSERT INTO reimbursement_status(reimb_status) VALUES ('PENDING');
 INSERT INTO reimbursement_status(reimb_status) VALUES ('APPROVED');

@@ -15,10 +15,8 @@ public class ReimbursementsDAO implements ReimbursementsDAOInterface {
 	@Override
 	public void addReimbursement(int reimb_type_id, String reimb_description, int reimb_amount) {
 		try(Connection conn = ConnectionUtil.getConnection()){
-			String sql = "INSERT into \"ers\".reimbursements"
-					+ "(reimb_amount, reimb_submitted, reimb_resolved, reimb_description, "
-					+ "reimb_author, reimb_resolver, reimb_status_id, reimb_type_id)"
-					+ "values (?, ?, null, ?, 1, 2, 1, ?);";
+			String sql = "INSERT into \"ers\".reimbursements (reimb_amount, reimb_submitted, reimb_resolved, reimb_description, reimb_author, reimb_resolver, reimb_status_id, reimb_type_id)"
+					+ "values (?, current_timestamp, null, ?, 5, 6, 1, ?);";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, reimb_amount);
@@ -27,6 +25,7 @@ public class ReimbursementsDAO implements ReimbursementsDAOInterface {
 			
 			ps.executeUpdate();
 		} catch(SQLException e) {
+			System.out.println("ERROR!!! Add Reimbursement Failed!");
 			e.printStackTrace();
 		}
 	}

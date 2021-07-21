@@ -182,5 +182,5 @@ async function submitReimbFunction(){
 }
 
 function backFunction(){
-    window.location.replace("file:///C:/Users/joeid/Revature/ProjectOneRepo/ers/FrontEnd2.login.html")
+    window.location.href = "index.html";
 }

@@ -45,10 +45,10 @@ public class EmployeeController {
 			}
 			
 			String body = new String(sb);
-			
 			ReimbursementsDTO rDTO = om.readValue(body, ReimbursementsDTO.class);
 			rs.addNewTicket(rDTO.reimb_type_id, rDTO.reimb_description, rDTO.reimb_amount);
 			res.setStatus(200);
+			res.getWriter().print("Reimbursement successfully added");
 		}
 	}
 }
