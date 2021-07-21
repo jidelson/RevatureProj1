@@ -39,7 +39,7 @@ footer{
 #loginButton{
 background-color: #8dc98e;
   border: 2px solid black; 
-  color: white;
+  color: beige;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -48,11 +48,12 @@ background-color: #8dc98e;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 #loginButton:hover {
     background-color: #4CAF50; 
-    color: white; 
+    color: black; 
     border: 2px solid black ;
   }
 
@@ -77,8 +78,8 @@ background-color: #8dc98e;
 #submitbutton{
     background-color: lightskyblue;
   border: 2px solid black; 
-  color: white;
-  padding: 16px 32px;
+  color: beige;
+  padding: 8px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -86,6 +87,7 @@ background-color: #8dc98e;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 #submitbutton:hover {
@@ -101,6 +103,14 @@ background-color: #8dc98e;
 
 #submitSection{
     margin-bottom: 5%;
+}
+
+#oldButton:hover{
+    background-color: darkgray;
+}
+
+#pendingButton:hover{
+    background-color: darkgray;
 }
 
 /* MANAGER */
@@ -122,4 +132,61 @@ background-color: #8dc98e;
 
 #pendingButton{
     margin-bottom: 2%;
+}
+
+#statusFilterInput{
+    margin-bottom: 2%;
+}
+
+#statusFilter{
+    background-color: #72c273;
+  border: 2px solid black; 
+  color: beige;
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#statusFilter:hover{
+    background-color: #25c428;
+    border: 2px solid black; 
+    color: black;
+}
+
+#submitReimb{
+    background-color: lightskyblue;
+    border: 2px solid black; 
+    color: beige;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#submitReimb:hover{
+    background-color: rgb(42, 150, 218);
+    color: black;
+}
+
+#reimbIdInput{
+    margin-bottom: 4%;
+}
+
+#all:hover{
+    background-color:darkgray;
+}
+
+#backBtn:hover{
+    background-color: darkgray;
 }
