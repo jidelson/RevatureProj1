@@ -2,6 +2,11 @@ body{
     background-color: lightgray;
 }
 
+p{
+    font-family: American Typewriter, serif;
+
+}
+
 .header{
     text-align: center;
     color:beige;
@@ -12,9 +17,10 @@ body{
 footer{
     background-color: blue;
     color: beige;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width:100%;
+    margin: 0%;
 }
 
 #thankYou{
@@ -64,7 +70,8 @@ background-color: #8dc98e;
 }
 
 #backBtn{
-    margin:1%;
+    margin-left:1%;
+    margin-top:0%;
 }
 
 #submitbutton{
@@ -92,6 +99,10 @@ background-color: #8dc98e;
     background-image: linear-gradient(to bottom right, rgb(157, 202, 229), rgb(36, 116, 167));
 }
 
+#submitSection{
+    margin-bottom: 5%;
+}
+
 /* MANAGER */
 
 #managerTable1, #managerTable2{
@@ -99,4 +110,16 @@ background-color: #8dc98e;
 
     background-color: rgb(157, 202, 229); /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, rgb(157, 202, 229), rgb(36, 116, 167));
+}
+
+#welcomeManager{
+    text-align: center;
+}
+
+#oldButton{
+    margin-bottom: 2%;
+}
+
+#pendingButton{
+    margin-bottom: 2%;
 }

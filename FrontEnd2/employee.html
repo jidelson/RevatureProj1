@@ -9,20 +9,17 @@
 
 </head>
 <body>
-
+    <h1 class="header">JOE'S EMPLOYEE REIMBURSMENT SYSTEM</h1>
     <header>
         <button id="backBtn">Back to Login</button>
     </header>
 
     <div class="container">
         <div class="row">
-            <h1 id="welcomeEmp" class="col-lg-12">Welcome to your ERS!</h1>
+            <h1 id="welcomeEmp" class="col-lg-12">Welcome Employee!</h1>
 
             <div class="row">
                 <button id="oldButton">View Old Tickets</button>
-
-                <br>
-                <br>
 
                 <div class="row" id="table-row">
                     <table class="table table-hover table-bordered" id="table1" style="display:none">
@@ -45,9 +42,6 @@
 
             <div class="row">
                 <button id="pendingButton">View Pending Tickets</button>
-
-                <br>
-                <br>
 
                 <div class="row" id="table-row">
                     <table class="table table-hover table-bordered" id="table2" style="display:none">
@@ -80,12 +74,20 @@
             <br>
             <br>
 
-            <p id="submitMsg" style="display:none;">Reimbursement Submitted!</p>
-            <p id="errorMsg" style="display:none;">Reimbursement Failed.</p>
+            <div id="submitSection">
+                <p id="submitMsg" style="display:none;">Reimbursement Submitted!</p>
+                <p id="errorMsg" style="display:none;">Reimbursement Failed.</p>
+            </div>
+            
             
         </div>
 
     </div>  
+    <footer>
+        <p id="thankYou">
+        Thank you for working with Joe! You are a valued team member!
+        </p>
+</footer>
 <script src="employee.js"></script>
 </body>
 </html>
