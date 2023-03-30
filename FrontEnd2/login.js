@@ -27,9 +27,9 @@ async function loginFunc(){
         let user = await response.json();
 
         if(user.user_role_id === 1){
-            window.location.href = "employee.html";
+            window.location.href = "./employee.html";
         } else if(user.user_role_id === 2){
-            window.location.href = "manager.html";
+            window.location.href = "./manager.html";
         }
         
     } else {
